@@ -23,21 +23,5 @@
         root.appendChild(h1);
         root.appendChild(p);
     </script>
-
-    <script crossorigin  src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin  src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-
-    <script>
-        var mainReact;
-        var hOneReact = React.createElement("h1",{"id":"head1","xyz":"xyz_value"},"HEADING CREATED using React");
-        var reactPara = React.createElement("p",{},"Paragraph rendered by React");
-        var htmlRoot = document.getElementById("main");
-        var rootReact = ReactDOM.createRoot(htmlRoot);
-
-        var mainDiv = React.createElement("div",{},[hOneReact,reactPara]);
-        //test code
-
-        //rootReact.render(hOneReact);
-        rootReact.render(mainDiv);
-    </script>
+    
 </html>
