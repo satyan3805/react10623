@@ -51,7 +51,11 @@ public class SwiggyMenuApi extends HttpServlet {
 
             HttpResponse<String> res = client.send(req, HttpResponse.BodyHandlers.ofString());
 
+            response.setHeader("Access-Control-Allow-Origin", "http://localhost:1234");
+            response.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+            response.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
             response.setContentType("application/json");
+            response.setCharacterEncoding("UTF-8");
 
             PrintWriter out = response.getWriter();
             out.print(res.body());
