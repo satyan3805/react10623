@@ -1,3 +1,5 @@
+import NavItems from "./NavItems";
+
 function Header() {
   return (
     <div className="header">
@@ -7,14 +9,15 @@ function Header() {
           src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png"
         />
       </div>
-      <div className="nav-items">
+      <NavItems />
+      {/* <div className="nav-items">
         <ul>
           <li>Home</li>
           <li>About Us</li>
           <li>Contact Us</li>
           <li>Cart</li>
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 }

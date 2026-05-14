@@ -1,3 +1,5 @@
+import About from "./About";
+
 function ResCard(props) {
   //console.log(props);
   //   const resName = props.resData.name;
@@ -7,6 +9,7 @@ function ResCard(props) {
   //   const deliveryTime = props.resData.deliveryTime;
   const {
     cloudinaryImageId,
+    id,
     name,
     avgRating,
     cuisines,
@@ -16,7 +19,14 @@ function ResCard(props) {
 
   //console.log(props.resData?.info.sla.deliveryTime);
   return (
-    <div className="res-card" style={{ backgroundColor: "#f0f0f0" }}>
+    <div
+      className="res-card"
+      style={{ backgroundColor: "#f0f0f0" }}
+      onClick={() => {
+        console.log("res Click Event" + id);
+        return <About />;
+      }}
+    >
       <img
         className="res-logo"
         alt="res-logo"

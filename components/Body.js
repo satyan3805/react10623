@@ -1,7 +1,7 @@
 import { getResCardsInfo, SWIGGY_API_URL } from "../utils/constants";
 import ResCard from "./ResCard";
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Body() {
   //var searchText = "";
@@ -9,6 +9,10 @@ function Body() {
   //var resArray = getResCardsInfo();
   const [resArray, setResArray] = useState([]);
   const [filteredArray, setFilteredArray] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+  }, [searchText]);
 
   const fetchData = async () => {
     const data = await fetch(SWIGGY_API_URL);
@@ -24,7 +28,6 @@ function Body() {
     );
   };
 
-  fetchData();
   //console.log(resArray);
   return (
     <>
